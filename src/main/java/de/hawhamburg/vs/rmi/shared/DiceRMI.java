@@ -1,4 +1,4 @@
-package de.hawhamburg.vs.shared;
+package de.hawhamburg.vs.rmi.shared;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

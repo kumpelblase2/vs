@@ -1,7 +1,7 @@
-package de.hawhamburg.vs.server;
+package de.hawhamburg.vs.rmi.server;
 
-import de.hawhamburg.vs.shared.DiceRMI;
-import de.hawhamburg.vs.shared.Roll;
+import de.hawhamburg.vs.rmi.shared.DiceRMI;
+import de.hawhamburg.vs.rmi.shared.Roll;
 
 import java.rmi.RemoteException;
 import java.util.Random;

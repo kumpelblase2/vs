@@ -1,7 +1,7 @@
-package de.hawhamburg.vs;
+package de.hawhamburg.vs.rmi;
 
-import de.hawhamburg.vs.server.DiceImpl;
-import de.hawhamburg.vs.shared.DiceRMI;
+import de.hawhamburg.vs.rmi.server.DiceImpl;
+import de.hawhamburg.vs.rmi.shared.DiceRMI;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
