@@ -1,7 +1,7 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: 'idea'
-
+apply plugin: 'application'
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use 'jcenter' for resolving your dependencies.
@@ -9,6 +9,10 @@ repositories {
     jcenter()
     mavenCentral()
 }
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+version '0.1.0'
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
@@ -18,3 +22,13 @@ dependencies {
     testCompile 'org.mockito:mockito-core:1.10.19'
 }
 
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'VS Rest Project',
+                'Implementation-Version': version,
+                'Main-Class': 'de.hawhamburg.vs.rest.RestMain'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
