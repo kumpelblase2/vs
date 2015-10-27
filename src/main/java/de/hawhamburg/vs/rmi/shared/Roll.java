@@ -27,4 +27,11 @@ public class Roll implements Serializable {
     public int hashCode() {
         return number;
     }
+
+    @Override
+    public String toString() {
+        return "Roll{" +
+                "number=" + number +
+                '}';
+    }
 }
