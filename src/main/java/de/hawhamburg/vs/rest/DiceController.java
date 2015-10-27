@@ -19,8 +19,7 @@ public final class DiceController {
     public DiceController(DiceRMI dice) {
         this.dice = dice;
         get("/dice", this::handleDiceGet, json());
-        get("/deck/:gameId/community", this::handleCommunityDeck, json());
-        get("/deck/:gameId/chance", this::handleChanceDeck, json());
+
     }
 
     public Roll handleDiceGet(Request request, Response response) {
@@ -31,13 +30,5 @@ public final class DiceController {
         } catch (RemoteException e) {
             return null;
         }
-    }
-
-    public Object handleCommunityDeck(Request request, Response response) {
-        return null;
-    }
-
-    public Object handleChanceDeck(Request request, Response response) {
-        return null;
     }
 }
