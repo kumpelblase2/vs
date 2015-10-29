@@ -9,6 +9,6 @@ import java.util.Random;
 public class DiceImpl implements DiceRMI {
     @Override
     public Roll roll() throws RemoteException {
-        return new Roll(new Random().nextInt(5) + 1);
+        return new Roll(new Random().nextInt(6) + 1);
     }
 }

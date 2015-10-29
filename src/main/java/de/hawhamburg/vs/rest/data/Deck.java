@@ -24,10 +24,10 @@ public class Deck {
     }
 
     public Card drawCommunityCard() {
-        return community.get(new Random().nextInt(community.size() - 1));
+        return community.get(new Random().nextInt(community.size()));
     }
 
     public Card drawChangeCard() {
-        return chance.get(new Random().nextInt(chance.size() - 1));
+        return chance.get(new Random().nextInt(chance.size()));
     }
 }
